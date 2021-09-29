@@ -1,9 +1,9 @@
-# mjml-signoff
+# MJML Sign-Off: `<mj-signoff>`
 
 Designed for the sign-off or signature section at the bottom of your email
-content, `<mj-signoff>` allows you to easily include an image alongside your
-signature such as a photo or logo, which is a common best practice in many types
-of emails.
+content, the `<mj-signoff>` tag allows you to easily include an image alongside
+your signature such as a photo or logo, which is a common best practice in many
+types of emails.
 
 ## Usage
 
@@ -43,7 +43,7 @@ column below the optional strings -- for instance, the wrapped and linked
 company name shown above. `<mj-signoff>` need not have any content within its
 tags, however.
 
-## `<mjml-signoff>` options
+## `<mj-signoff>` options
 
 Available options for this component include:
 
