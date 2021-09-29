@@ -72,8 +72,9 @@ As an alternative to `<mjml-signoff>`, you can use the
 [`<mj-group>`](https://documentation.mjml.io/#mj-group) element, but note its
 warning for iOS 9.
 
-If you are not using an image in your sign-off, you can simply use the default
-`<mj-text>` element in the `content/signoff.hbs` template.
+If you are not using an image in your sign-off, or you are including an image
+on a line by itself (such as an image of a signature) you can simply use the
+default `<mj-text>` element.
 
 ## Setup
 
