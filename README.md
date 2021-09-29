@@ -36,6 +36,13 @@ Will show this markup:
 
 (markup image to come)
 
+The `closing`, `name` and `title` strings are all optional, as are an
+additional `title2` and `title3` strings. These strings cannot contain HTML
+elements, however any content within the element itself is placed in the text
+column below the optional strings -- for instance, the wrapped and linked
+company name shown above. `<mj-signoff>` need not have any content within its
+tags, however.
+
 ## `<mjml-signoff>` options
 
 Available options for this component include:
@@ -59,11 +66,9 @@ Available options for this component include:
 | `image-alt`           | string                    | Alternative text for image (you may legitimately wish to leave this blank; see [the spec for graphical representation](https://html.spec.whatwg.org/multipage/images.html#a-graphical-representation-of-some-of-the-surrounding-text), [decorative images](https://html.spec.whatwg.org/multipage/images.html#a-purely-decorative-image-that-doesn't-add-any-information) and [example 2 here](https://webaim.org/techniques/alttext/#context)) | none          |
 | `text-column-padding` | pixels                    | Applies only to the text column                                                                                                                                                                                                                                                                                                                                                                                                                 | `0 10px`      |
 
-Strings cannot contain HTML elements, however any content within the element
-itself is placed in the text column below the optional strings, and there are
-styling options in the theming configuration.
+## Alternatives
 
-As an alternative to this component, you can use the
+As an alternative to `<mjml-signoff>`, you can use the
 [`<mj-group>`](https://documentation.mjml.io/#mj-group) element, but note its
 warning for iOS 9.
 
