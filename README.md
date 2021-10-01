@@ -32,9 +32,9 @@ This MJML...
 
 ```
 
-Will show this markup:
+Will produce the following:
 
-(markup image to come)
+![Example of generated markup from the MJML Signoff component](examples/mjml-signoff-screenshot.png)
 
 The `closing`, `name` and `title` strings are all optional, as are an
 additional `title2` and `title3` strings. These strings cannot contain HTML
@@ -42,6 +42,32 @@ elements, however any content within the element itself is placed in the text
 column below the optional strings -- for instance, the wrapped and linked
 company name shown above. `<mj-signoff>` need not have any content within its
 tags, however.
+
+The wrapper `<p>` and `<div>` elements are only inserted if the corresponding strings are set. A simplified version of the [generated HTML](examples/index.html) is:
+
+```html
+<div class="signoff">
+  <!-- table markup -->
+    <div class="mj-column-px-75 mj-outlook-group-fix column signoff__image">
+      <!-- table markup -->
+        <img />
+      <!-- table markup -->
+    </div>
+    <div class="mj-column-per-50 mj-outlook-group-fix column signoff__text">
+      <!-- table markup -->
+        <p class="signoff__closing"><!-- if string is set --></p>
+        <p class="signoff__name"><!-- if string is set --></p>
+        <p class="signoff__title"><!-- if string is set --></p>
+        <p class="signoff__title2"><!-- if string is set --></p>
+        <p class="signoff__title3"><!-- if string is set --></p>
+        <div class="signoff__custom"><!-- if <mj-signoff> element has content --></div>
+      <!-- table markup -->
+    </div>
+  <!-- table markup -->
+</div>
+```
+
+The order of the `signoff__image` and `signoff__text`
 
 ## `<mj-signoff>` options
 
@@ -65,6 +91,7 @@ Available options for this component include:
 | `image-height`        | pixels                    | Height of image                                                                                                                                                                                                                                                                                                                                                                                                                                 | none          |
 | `image-alt`           | string                    | Alternative text for image (you may legitimately wish to leave this blank; see [the spec for graphical representation](https://html.spec.whatwg.org/multipage/images.html#a-graphical-representation-of-some-of-the-surrounding-text), [decorative images](https://html.spec.whatwg.org/multipage/images.html#a-purely-decorative-image-that-doesn't-add-any-information) and [example 2 here](https://webaim.org/techniques/alttext/#context)) | none          |
 | `text-column-padding` | pixels                    | Applies only to the text column                                                                                                                                                                                                                                                                                                                                                                                                                 | `0 10px`      |
+
 
 ## Alternatives
 
