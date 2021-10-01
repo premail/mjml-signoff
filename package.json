@@ -2,12 +2,14 @@
   "name": "mjml-signoff",
   "version": "1.0.0",
   "description": " A bulletproof photo-plus-closing sign-off element for your MJML emails.",
+  "main": "index.js",
   "scripts": {
     "start": "gulp watch",
     "build": "gulp build",
-    "lint": "eslint components",
-    "format": "prettier --write --single-quote --trailing-comma all '{components,test}/**/*.js'",
-    "test": "jest"
+    "test": "modern test",
+    "format": "modern format",
+    "lint": "modern lint",
+    "precommit": "modern precommit"
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,6 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
     "@babel/register": "^7.9.0",
-    "eslint": "^4.18.2",
     "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.13.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
@@ -45,10 +46,11 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-watch": "^4.3.9",
-    "jest": "^26.0.1",
-    "prettier": "^2.0.5"
+    "modern-node": "^2.9.0"
   },
   "dependencies": {
-    "mjml": "^4.0.0"
+    "lodash": "^4.17.21",
+    "mjml": "^4.0.0",
+    "mjml-core": "^4.10.3"
   }
 }
