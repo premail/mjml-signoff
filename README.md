@@ -69,7 +69,9 @@ The wrapper `<p>` and `<div>` elements are only inserted if the corresponding st
 </div>
 ```
 
-The order of the `signoff__image` and `signoff__text` columns is reversed if `image-position` is set to `right`.
+The order of the image and text columns is reversed if `image-position` is set to `right`.
+
+### Styling
 
 The following `mj-class` elements are available for styling with [`<mj-attributes>`](https://documentation.mjml.io/#mj-attributes):
 
@@ -79,7 +81,7 @@ The following `mj-class` elements are available for styling with [`<mj-attribute
 - `signoff__text-wrapper`
 - `signoff__text`
 
-And the following CSS classes are available for styling with [`<mj-style>`](https://documentation.mjml.io/#mj-style)
+And the following CSS classes are available for styling with [`<mj-style>`](https://documentation.mjml.io/#mj-style):
 
 - `signoff`
 - `signoff__image-wrapper`
@@ -95,7 +97,7 @@ And the following CSS classes are available for styling with [`<mj-style>`](http
 
 You can see how each of these are used in the [example MJML file](examples/index.mjml).
 
-## `<mj-signoff>` options
+### `<mj-signoff>` options
 
 Available options for this component include:
 
@@ -119,27 +121,17 @@ Available options for this component include:
 | `text-column-padding` | pixels                    | Applies only to the text column                                                                                                                                                                                                                                                                                                                                                                                                                 | `0 10px`      |
 
 
-## Alternatives
-
-As an alternative to `<mjml-signoff>`, you can use the
-[`<mj-group>`](https://documentation.mjml.io/#mj-group) element, but note its
-warning for iOS 9.
-
-If you are not using an image in your sign-off, or you are including an image
-on a line by itself (such as an image of a signature) you can simply use the
-default `<mj-text>` element.
-
-## Use this in your emails
+### Use this in your emails
 
 Install via npm:
 
-```
+```sh
 npm install mjml-signoff
 ```
 
 Add the package to your `.mjmlconfig`:
 
-```
+```json
 {
   "packages": [
     "mjml-signoff/lib/index.js"
@@ -151,20 +143,30 @@ Add the package to your `.mjmlconfig`:
 
 Grab via git:
 
-```
+```sh
 git clone https://github.com/premail/mjml-signoff.git
 ```
 
 Navigate to the folder and install:
 
-```
+```sh
 cd mjml-signoff
 npm install
 ```
 
 Edit the component script file in `./components/`, then run `gulp build` or `gulp watch` to compile.
 
-If you want to use a forked version of this component without having to publish it to npm, see [premail/mjml-custom-component](https://github.com/premail/mjml-custom-component) for a guide.
+If you want to use a forked version of this component in your emails without having to publish it to npm, see [premail/mjml-custom-component](https://github.com/premail/mjml-custom-component) for a guide.
+
+## Alternatives
+
+As an alternative to `<mjml-signoff>`, you can use the
+[`<mj-group>`](https://documentation.mjml.io/#mj-group) element, but note its
+warning for iOS 9.
+
+If you are not using an image in your sign-off, or you are including an image
+on a line by itself (such as an image of a signature) you can simply use the
+default `<mj-image>` and `<mj-text>` elements.
 
 ## License
 
