@@ -11,6 +11,17 @@ types of emails.
 <!-- prettier-ignore-start -->
 
 <!--ts-->
+* [MJML Sign-Off: &lt;mj-signoff&gt;](#mjml-sign-off-mj-signoff)
+   * [Usage](#usage)
+      * [Styling](#styling)
+      * [&lt;mj-signoff&gt; options](#mj-signoff-options)
+      * [Use this in your emails](#use-this-in-your-emails)
+   * [Fork or contribute to this component](#fork-or-contribute-to-this-component)
+   * [Alternatives](#alternatives)
+   * [License](#license)
+
+<!-- Added by: runner, at: Fri Oct  1 23:08:37 UTC 2021 -->
+
 <!--te-->
 <!-- prettier-ignore-end -->
 
