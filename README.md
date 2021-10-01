@@ -7,7 +7,7 @@ types of emails.
 
 ## Usage
 
-This MJML...
+This MJML:
 
 ```html
 <mjml>
@@ -48,13 +48,13 @@ The wrapper `<p>` and `<div>` elements are only inserted if the corresponding st
 ```html
 <div class="signoff">
   <!-- table markup -->
-    <div class="mj-column-px-75 mj-outlook-group-fix column signoff__image">
-      <!-- table markup -->
-        <img alt="" width="" height="" src="" />
+    <div class="signoff__image-wrapper">
+      <!-- table markup, class="signoff__image" -->
+        <img />
       <!-- table markup -->
     </div>
-    <div class="mj-column-per-50 mj-outlook-group-fix column signoff__text">
-      <!-- table markup -->
+    <div class="signoff__text-wrapper">
+      <!-- table markup, class="signoff__text" -->
         <p class="signoff__closing"><!-- if string is set --></p>
         <p class="signoff__name"><!-- if string is set --></p>
         <p class="signoff__title"><!-- if string is set --></p>
@@ -70,6 +70,30 @@ The wrapper `<p>` and `<div>` elements are only inserted if the corresponding st
 ```
 
 The order of the `signoff__image` and `signoff__text` columns is reversed if `image-position` is set to `right`.
+
+The following `mj-class` elements are available for styling with [`<mj-attributes>`](https://documentation.mjml.io/#mj-attributes):
+
+- `signoff`
+- `signoff__image-wrapper`
+- `signoff__image`
+- `signoff__text-wrapper`
+- `signoff__text`
+
+And the following CSS classes are available for styling with [`<mj-style>`](https://documentation.mjml.io/#mj-style)
+
+- `signoff`
+- `signoff__image-wrapper`
+- `signoff__image`
+- `signoff__text-wrapper`
+- `signoff__text`
+- `signoff__closing`
+- `signoff__name`
+- `signoff__title`
+- `signoff__title2`
+- `signoff__title3`
+- `signoff__custom`
+
+You can see how each of these are used in the [example MJML file](examples/index.mjml).
 
 ## `<mj-signoff>` options
 
@@ -105,7 +129,7 @@ If you are not using an image in your sign-off, or you are including an image
 on a line by itself (such as an image of a signature) you can simply use the
 default `<mj-text>` element.
 
-## Setup
+## Use this in your emails
 
 Install via npm:
 
@@ -113,7 +137,7 @@ Install via npm:
 npm install mjml-signoff
 ```
 
-Then add the package to your `.mjmlconfig`:
+Add the package to your `.mjmlconfig`:
 
 ```
 {
@@ -122,6 +146,25 @@ Then add the package to your `.mjmlconfig`:
   ]
 }
 ```
+
+## Fork or contribute to this component
+
+Grab via git:
+
+```
+git clone https://github.com/premail/mjml-signoff.git
+```
+
+Navigate to the folder and install:
+
+```
+cd mjml-signoff
+npm install
+```
+
+Edit the component script file in `./components/`, then run `gulp build` or `gulp watch` to compile.
+
+If you want to use a forked version of this component without having to publish it to npm, see [premail/mjml-custom-component](https://github.com/premail/mjml-custom-component) for a guide.
 
 ## License
 
