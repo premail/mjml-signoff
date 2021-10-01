@@ -122,9 +122,9 @@ And the following CSS classes are available for styling with [`<mj-style>`](http
 
 You can see how each of these are used in the [example MJML file](examples/index.mjml).
 
-## `<mj-signoff>` options
+## Options
 
-Available options for this component include:
+Available options for `<mj-signoff>`:
 
 
 | option                | unit                      | details                                                                                                                                                                                                                                                                                                                                                                                                                                         | default value |
@@ -146,9 +146,9 @@ Available options for this component include:
 | `text-column-padding` | pixels                    | Applies only to the text column                                                                                                                                                                                                                                                                                                                                                                                                                 | `0 10px`      |
 
 
-## Use this in your emails
+## Adding this to your emails
 
-Install via npm:
+In your MJML project directory, install this package via npm:
 
 ```sh
 npm install mjml-signoff
@@ -164,9 +164,11 @@ Add the package to your `.mjmlconfig`:
 }
 ```
 
+You can now use `<mj-signoff>` in your MJML emails.
+
 ## Fork or contribute to this component
 
-Grab via git:
+If you want to edit this component, first grab it via git:
 
 ```sh
 git clone https://github.com/premail/mjml-signoff.git
