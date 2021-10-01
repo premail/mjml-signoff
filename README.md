@@ -17,13 +17,13 @@ types of emails:
 * [Usage](#usage)
    * [Coding](#coding)
    * [Styling](#styling)
-   * [&lt;mj-signoff&gt; options](#mj-signoff-options)
-   * [Use this in your emails](#use-this-in-your-emails)
+   * [Options](#options)
+   * [Adding this to your emails](#adding-this-to-your-emails)
    * [Fork or contribute to this component](#fork-or-contribute-to-this-component)
 * [Alternatives](#alternatives)
 * [License](#license)
 
-<!-- Added by: runner, at: Fri Oct  1 23:13:15 UTC 2021 -->
+<!-- Added by: runner, at: Fri Oct  1 23:17:21 UTC 2021 -->
 
 <!--te-->
 <!-- prettier-ignore-end -->
