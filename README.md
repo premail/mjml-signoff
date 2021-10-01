@@ -15,6 +15,7 @@ types of emails:
 <!--ts-->
 * [MJML Sign-Off: &lt;mj-signoff&gt;](#mjml-sign-off-mj-signoff)
 * [Usage](#usage)
+   * [Coding](#coding)
    * [Styling](#styling)
    * [&lt;mj-signoff&gt; options](#mj-signoff-options)
    * [Use this in your emails](#use-this-in-your-emails)
@@ -22,7 +23,7 @@ types of emails:
 * [Alternatives](#alternatives)
 * [License](#license)
 
-<!-- Added by: runner, at: Fri Oct  1 23:10:41 UTC 2021 -->
+<!-- Added by: runner, at: Fri Oct  1 23:13:15 UTC 2021 -->
 
 <!--te-->
 <!-- prettier-ignore-end -->
