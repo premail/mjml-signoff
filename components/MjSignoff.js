@@ -40,13 +40,16 @@ export default class MjSignoff extends BodyComponent {
   renderImage() {
     return `
       <mj-column
-        css-class="column signoff__image"
+        mj-class="signoff__image-wrapper"
+        css-class="column signoff__image-wrapper"
         ${this.htmlAttributes({
           width: this.getAttribute('image-width'),
           'background-color': this.getAttribute('background-color'),
         })}
       >
         <mj-image
+          mj-class="signoff__image"
+          css-class="signoff__image"
           ${this.htmlAttributes({
             padding: this.getAttribute('image-padding'),
             src: this.getAttribute('image-src'),
@@ -63,12 +66,15 @@ export default class MjSignoff extends BodyComponent {
   renderText() {
     let textContent = `
       <mj-column
-        css-class="column signoff__text"
+        mj-class="signoff__text-wrapper"
+        css-class="column signoff__text-wrapper"
         ${this.htmlAttributes({
           'background-color': this.getAttribute('background-color'),
         })}
       >
         <mj-text
+          mj-class="signoff__text"
+          css-class="signoff__text"
           ${this.htmlAttributes({
             padding: this.getAttribute('text-column-padding'),
           })}
@@ -96,9 +102,9 @@ export default class MjSignoff extends BodyComponent {
     }
 
     textContent += `
-        <div class="signoff__custom">
-          ${this.getContent()}
-        </div>
+          <div class="signoff__custom">
+            ${this.getContent()}
+          </div>
         </mj-text>
       </mj-column>
     `
@@ -112,6 +118,7 @@ export default class MjSignoff extends BodyComponent {
 
     return this.renderMJML(`
       <mj-section
+        mj-class="signoff"
         css-class="signoff"
         ${this.htmlAttributes({
           padding: this.getAttribute('section-padding'),
