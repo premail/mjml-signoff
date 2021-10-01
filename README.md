@@ -5,6 +5,15 @@ content, the `<mj-signoff>` tag allows you to easily include an image alongside
 your signature such as a photo or logo, which is a common best practice in many
 types of emails.
 
+<!-- The following section, from "ts" to "te", is an automatically-generated
+  table of contents, updated whenever this file changes. Do not edit within
+  this section. -->
+<!-- prettier-ignore-start -->
+
+<!--ts-->
+<!--te-->
+<!-- prettier-ignore-end -->
+
 ## Usage
 
 This MJML:
