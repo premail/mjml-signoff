@@ -50,7 +50,7 @@ The wrapper `<p>` and `<div>` elements are only inserted if the corresponding st
   <!-- table markup -->
     <div class="mj-column-px-75 mj-outlook-group-fix column signoff__image">
       <!-- table markup -->
-        <img />
+        <img alt="" width="" height="" src="" />
       <!-- table markup -->
     </div>
     <div class="mj-column-per-50 mj-outlook-group-fix column signoff__text">
@@ -60,14 +60,16 @@ The wrapper `<p>` and `<div>` elements are only inserted if the corresponding st
         <p class="signoff__title"><!-- if string is set --></p>
         <p class="signoff__title2"><!-- if string is set --></p>
         <p class="signoff__title3"><!-- if string is set --></p>
-        <div class="signoff__custom"><!-- if <mj-signoff> element has content --></div>
+        <div class="signoff__custom">
+          <!-- if <mj-signoff> element has content -->
+        </div>
       <!-- table markup -->
     </div>
   <!-- table markup -->
 </div>
 ```
 
-The order of the `signoff__image` and `signoff__text`
+The order of the `signoff__image` and `signoff__text` columns is reversed if `image-position` is set to `right`.
 
 ## `<mj-signoff>` options
 
