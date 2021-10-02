@@ -182,7 +182,13 @@ npm install
 ```
 
 Edit the component script file in `./components/`, then run `gulp build` or
-`gulp watch` to compile.
+`gulp watch` to compile. We include
+[sheerun/modern-node](https://github.com/sheerun/modern-node), which formats and
+lints code automatically on commits using [Prettier](https://prettier.io/) and
+[ESLint](https://eslint.org/). You can use `npm run format` and `npm run lint`
+on their own as well.
+
+To run tests, use `npm run test`
 
 If you want to use a forked version of this component in your emails without
 having to publish it to npm, see
