@@ -3,7 +3,7 @@
 ![Checks](https://img.shields.io/github/checks-status/premail/mjml-signoff/main.svg?style=flat-square)
 ![NPM](https://img.shields.io/npm/v/mjml-signoff)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/premail/mjml-signoff?sort=semver)
-[![MJML 4.0+ valid](https://img.shields.io/badge/mjml-4%2B-brightgreen.svg?style=flat-square)](https://github.com/mjmlio/mjml/releases)\
+[![MJML 4.0+ valid](https://img.shields.io/badge/mjml-4%2B-brightgreen.svg?style=flat-square)](https://github.com/mjmlio/mjml/releases)
 ![License](https://img.shields.io/npm/l/mjml-signoff)
 
 Designed for the sign-off or signature section at the bottom of your email
