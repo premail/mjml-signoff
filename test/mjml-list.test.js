@@ -1,3 +1,4 @@
+import fs from 'fs'
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
 
@@ -12,204 +13,40 @@ function toHtml (mjml) {
   return conversion.html
 }
 
+const data = fs.readFileSync('./examples/index.mjml', 'utf8')
+
 describe('mjml-signoff', () => {
   beforeAll(() => {
     registerComponent(MjSignoff)
   })
 
   it('should include the closing', () => {
-    expect(
-      toHtml(`
-<mjml>
-  <mj-body>
-    <mj-section>
-      <mj-column>
-        <mj-signoff
-          closing="Thank you,"
-          name="John Q. Public"
-          title="Wild and Crazy Guy"
-          title2="Acme Corp."
-          title3="(202) 555-1212"
-          image-src="https://picsum.photos/75/100"
-          image-width="75px"
-          image-height="100px"
-          image-alt=""
-        >
-          <p><a href="https://example.com">Example, Inc.</a></p>
-        </mj-signoff>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
-    `)
-    ).toContain('Thank you,')
+    expect(toHtml(data)).toContain(
+      '<p class="signoff__closing" style="margin-top: 0;">Thank you,</p>'
+    )
   })
 
   it('should include the name', () => {
-    expect(
-      toHtml(`
-<mjml>
-  <mj-body>
-    <mj-section>
-      <mj-column>
-        <mj-signoff
-          closing="Thank you,"
-          name="John Q. Public"
-          title="Wild and Crazy Guy"
-          title2="Acme Corp."
-          title3="(202) 555-1212"
-          image-src="https://picsum.photos/75/100"
-          image-width="75px"
-          image-height="100px"
-          image-alt=""
-        >
-          <p><a href="https://example.com">Example, Inc.</a></p>
-        </mj-signoff>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
-    `)
-    ).toContain('John Q. Public')
+    expect(toHtml(data)).toContain(
+      '<p class="signoff__name" style="margin-bottom: 0;">John Q. Public</p>'
+    )
   })
 
   it('should include the title', () => {
-    expect(
-      toHtml(`
-<mjml>
-  <mj-body>
-    <mj-section>
-      <mj-column>
-        <mj-signoff
-          closing="Thank you,"
-          name="John Q. Public"
-          title="Wild and Crazy Guy"
-          title2="Acme Corp."
-          title3="(202) 555-1212"
-          image-src="https://picsum.photos/75/100"
-          image-width="75px"
-          image-height="100px"
-          image-alt=""
-        >
-          <p><a href="https://example.com">Example, Inc.</a></p>
-        </mj-signoff>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
-    `)
-    ).toContain('Wild and Crazy Guy')
+    expect(toHtml(data)).toContain(
+      '<p class="signoff__title" style="margin-top: 0; margin-bottom: 0;">Wild and Crazy Guy</p>'
+    )
   })
 
-  it('should include the title2', () => {
-    expect(
-      toHtml(`
-<mjml>
-  <mj-body>
-    <mj-section>
-      <mj-column>
-        <mj-signoff
-          closing="Thank you,"
-          name="John Q. Public"
-          title="Wild and Crazy Guy"
-          title2="Acme Corp."
-          title3="(202) 555-1212"
-          image-src="https://picsum.photos/75/100"
-          image-width="75px"
-          image-height="100px"
-          image-alt=""
-        >
-          <p><a href="https://example.com">Example, Inc.</a></p>
-        </mj-signoff>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
-    `)
-    ).toContain('Acme Corp.')
+  it('should include the enclosed content', () => {
+    expect(toHtml(data)).toContain(
+      '<div class="signoff__custom">\n            <p style="margin-top: 0;"><a href="https://example.com" style="color: #800080; font-weight: bold;">Example, Inc.</a></p>\n          </div>'
+    )
   })
 
-  it('should include the title3', () => {
-    expect(
-      toHtml(`
-<mjml>
-  <mj-body>
-    <mj-section>
-      <mj-column>
-        <mj-signoff
-          closing="Thank you,"
-          name="John Q. Public"
-          title="Wild and Crazy Guy"
-          title2="Acme Corp."
-          title3="(202) 555-1212"
-          image-src="https://picsum.photos/75/100"
-          image-width="75px"
-          image-height="100px"
-          image-alt=""
-        >
-          <p><a href="https://example.com">Example, Inc.</a></p>
-        </mj-signoff>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
-    `)
-    ).toContain('(202) 555-1212')
+  it('should include the image', () => {
+    expect(toHtml(data)).toContain(
+      '<img alt height="100" src="https://picsum.photos/75/100" style="border:0;display:block;outline:none;text-decoration:none;height:100px;width:100%;font-size:16px;" width="75">'
+    )
   })
-
-  //   it('should include the enclosed content', () => {
-  //     expect(
-  //       toHtml(`
-  // <mjml>
-  //   <mj-body>
-  //     <mj-section>
-  //       <mj-column>
-  //         <mj-signoff
-  //           closing="Thank you,"
-  //           name="John Q. Public"
-  //           title="Wild and Crazy Guy"
-  //           title2="Acme Corp."
-  //           title3="(202) 555-1212"
-  //           image-src="https://picsum.photos/75/100"
-  //           image-width="75px"
-  //           image-height="100px"
-  //           image-alt=""
-  //         >
-  //           <p><a href="https://example.com">Example, Inc.</a></p>
-  //         </mj-signoff>
-  //       </mj-column>
-  //     </mj-section>
-  //   </mj-body>
-  // </mjml>
-  //     `)
-  //     ).toContain('<p><a href="https://example.com">Example, Inc.</a></p>')
-  //   })
-
-  //   it('should include the image', () => {
-  //     expect(
-  //       toHtml(`
-  // <mjml>
-  //   <mj-body>
-  //     <mj-section>
-  //       <mj-column>
-  //         <mj-signoff
-  //           closing="Thank you,"
-  //           name="John Q. Public"
-  //           title="Wild and Crazy Guy"
-  //           title2="Acme Corp."
-  //           title3="(202) 555-1212"
-  //           image-src="https://picsum.photos/75/100"
-  //           image-width="75px"
-  //           image-height="100px"
-  //           image-alt=""
-  //         >
-  //           <p><a href="https://example.com">Example, Inc.</a></p>
-  //         </mj-signoff>
-  //       </mj-column>
-  //     </mj-section>
-  //   </mj-body>
-  // </mjml>
-  //     `)
-  //     ).toContain('<img alt="" height="100" src="https://picsum.photos/75/100" style="border:0;display:block;outline:none;text-decoration:none;height:100px;width:100%;font-size:16px;" width="75" />')
-  //   })
 })
