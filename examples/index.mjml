@@ -12,6 +12,7 @@
       <mj-class name="signoff__text-wrapper" />
       <mj-class name="signoff__text" />
     </mj-attributes>
+    <!-- prettier-ignore -->
     <mj-style inline="inline">
       .signoff {
       }

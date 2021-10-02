@@ -12,11 +12,11 @@ export default class MjSignoff extends BodyComponent {
   }
 
   static allowedAttributes = {
-    'closing': 'string',
-    'name': 'string',
-    'title': 'string',
-    'title2': 'string',
-    'title3': 'string',
+    closing: 'string',
+    name: 'string',
+    title: 'string',
+    title2: 'string',
+    title3: 'string',
     'section-padding': 'unit(px){4}',
     'section-align': 'enum(left,center,right)',
     'background-color': 'color',
@@ -37,7 +37,7 @@ export default class MjSignoff extends BodyComponent {
     'text-column-padding': '0 10px',
   }
 
-  renderImage() {
+  renderImage () {
     return `
       <mj-column
         mj-class="signoff__image-wrapper"
@@ -63,7 +63,7 @@ export default class MjSignoff extends BodyComponent {
     `
   }
 
-  renderText() {
+  renderText () {
     let textContent = `
       <mj-column
         mj-class="signoff__text-wrapper"
@@ -82,7 +82,9 @@ export default class MjSignoff extends BodyComponent {
       `
 
     if (this.getAttribute('closing')) {
-      textContent += `<p class="signoff__closing">${this.getAttribute('closing')}</p>`
+      textContent += `<p class="signoff__closing">${this.getAttribute(
+        'closing'
+      )}</p>`
     }
 
     if (this.getAttribute('name')) {
@@ -90,15 +92,21 @@ export default class MjSignoff extends BodyComponent {
     }
 
     if (this.getAttribute('title')) {
-      textContent += `<p class="signoff__title">${this.getAttribute('title')}</p>`
+      textContent += `<p class="signoff__title">${this.getAttribute(
+        'title'
+      )}</p>`
     }
 
     if (this.getAttribute('title2')) {
-      textContent += `<p class="signoff__title2">${this.getAttribute('title2')}</p>`
+      textContent += `<p class="signoff__title2">${this.getAttribute(
+        'title2'
+      )}</p>`
     }
 
     if (this.getAttribute('title3')) {
-      textContent += `<p class="signoff__title3">${this.getAttribute('title3')}</p>`
+      textContent += `<p class="signoff__title3">${this.getAttribute(
+        'title3'
+      )}</p>`
     }
 
     textContent += `
@@ -112,9 +120,12 @@ export default class MjSignoff extends BodyComponent {
     return textContent
   }
 
-  render() {
+  render () {
     const content = [this.renderText(), this.renderImage()]
-    const orderedContent = this.getAttribute('image-position') === 'right' ? content : reverse(content)
+    const orderedContent =
+      this.getAttribute('image-position') === 'right'
+        ? content
+        : reverse(content)
 
     return this.renderMJML(`
       <mj-section

@@ -54,51 +54,53 @@ This MJML:
     </mj-section>
   </mj-body>
 </mjml>
-
 ```
 
 Will produce the following visual representation:
 
 ![Example of generated markup from the MJML Signoff component](examples/mjml-signoff-screenshot.png)
 
-The `closing`, `name` and `title` strings are all optional, as are an
-additional `title2` and `title3` strings. These strings cannot contain HTML
-elements, however any content within the element itself is placed in the text
-column below the optional strings -- for instance, the wrapped and linked
-company name shown above. `<mj-signoff>` need not have any content within its
-tags, however.
+The `closing`, `name` and `title` strings are all optional, as are an additional
+`title2` and `title3` strings. These strings cannot contain HTML elements,
+however any content within the element itself is placed in the text column below
+the optional strings -- for instance, the wrapped and linked company name shown
+above. `<mj-signoff>` need not have any content within its tags, however.
 
-The wrapper `<p>` and `<div>` elements are only inserted if the corresponding strings are set. A simplified version of the [generated HTML](examples/index.html) is:
+The wrapper `<p>` and `<div>` elements are only inserted if the corresponding
+strings are set. A simplified version of the
+[generated HTML](examples/index.html) is:
 
 ```html
 <div class="signoff">
   <!-- table markup -->
-    <div class="signoff__image-wrapper">
-      <!-- table markup, class="signoff__image" -->
-        <img />
-      <!-- table markup -->
+  <div class="signoff__image-wrapper">
+    <!-- table markup, class="signoff__image" -->
+    <img />
+    <!-- table markup -->
+  </div>
+  <div class="signoff__text-wrapper">
+    <!-- table markup, class="signoff__text" -->
+    <p class="signoff__closing"><!-- if string is set --></p>
+    <p class="signoff__name"><!-- if string is set --></p>
+    <p class="signoff__title"><!-- if string is set --></p>
+    <p class="signoff__title2"><!-- if string is set --></p>
+    <p class="signoff__title3"><!-- if string is set --></p>
+    <div class="signoff__custom">
+      <!-- if <mj-signoff> element has content -->
     </div>
-    <div class="signoff__text-wrapper">
-      <!-- table markup, class="signoff__text" -->
-        <p class="signoff__closing"><!-- if string is set --></p>
-        <p class="signoff__name"><!-- if string is set --></p>
-        <p class="signoff__title"><!-- if string is set --></p>
-        <p class="signoff__title2"><!-- if string is set --></p>
-        <p class="signoff__title3"><!-- if string is set --></p>
-        <div class="signoff__custom">
-          <!-- if <mj-signoff> element has content -->
-        </div>
-      <!-- table markup -->
-    </div>
+    <!-- table markup -->
+  </div>
   <!-- table markup -->
 </div>
 ```
 
-The order of the image and text columns is reversed if `image-position` is set to `right`.
+The order of the image and text columns is reversed if `image-position` is set
+to `right`.
 
 ## Styling
 
-The following `mj-class` elements are available for styling with [`<mj-attributes>`](https://documentation.mjml.io/#mj-attributes):
+The following `mj-class` elements are available for styling with
+[`<mj-attributes>`](https://documentation.mjml.io/#mj-attributes):
 
 - `signoff`
 - `signoff__image-wrapper`
@@ -106,7 +108,8 @@ The following `mj-class` elements are available for styling with [`<mj-attribute
 - `signoff__text-wrapper`
 - `signoff__text`
 
-And the following CSS classes are available for styling with [`<mj-style>`](https://documentation.mjml.io/#mj-style):
+And the following CSS classes are available for styling with
+[`<mj-style>`](https://documentation.mjml.io/#mj-style):
 
 - `signoff`
 - `signoff__image-wrapper`
@@ -120,12 +123,12 @@ And the following CSS classes are available for styling with [`<mj-style>`](http
 - `signoff__title3`
 - `signoff__custom`
 
-You can see how each of these are used in the [example MJML file](examples/index.mjml).
+You can see how each of these are used in the
+[example MJML file](examples/index.mjml).
 
 ## Options
 
 Available options for `<mj-signoff>`:
-
 
 | option                | unit                      | details                                                                                                                                                                                                                                                                                                                                                                                                                                         | default value |
 | --------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
@@ -145,7 +148,6 @@ Available options for `<mj-signoff>`:
 | `image-alt`           | string                    | Alternative text for image (you may legitimately wish to leave this blank; see [the spec for graphical representation](https://html.spec.whatwg.org/multipage/images.html#a-graphical-representation-of-some-of-the-surrounding-text), [decorative images](https://html.spec.whatwg.org/multipage/images.html#a-purely-decorative-image-that-doesn't-add-any-information) and [example 2 here](https://webaim.org/techniques/alttext/#context)) | none          |
 | `text-column-padding` | pixels                    | Applies only to the text column                                                                                                                                                                                                                                                                                                                                                                                                                 | `0 10px`      |
 
-
 ## Adding this to your emails
 
 In your MJML project directory, install this package via npm:
@@ -158,9 +160,7 @@ Add the package to your `.mjmlconfig`:
 
 ```json
 {
-  "packages": [
-    "mjml-signoff/lib/index.js"
-  ]
+  "packages": ["mjml-signoff/lib/index.js"]
 }
 ```
 
@@ -181,9 +181,13 @@ cd mjml-signoff
 npm install
 ```
 
-Edit the component script file in `./components/`, then run `gulp build` or `gulp watch` to compile.
+Edit the component script file in `./components/`, then run `gulp build` or
+`gulp watch` to compile.
 
-If you want to use a forked version of this component in your emails without having to publish it to npm, see [premail/mjml-custom-component](https://github.com/premail/mjml-custom-component) for a guide.
+If you want to use a forked version of this component in your emails without
+having to publish it to npm, see
+[premail/mjml-custom-component](https://github.com/premail/mjml-custom-component)
+for a guide.
 
 # Alternatives
 
@@ -191,8 +195,8 @@ As an alternative to `<mjml-signoff>`, you can use the
 [`<mj-group>`](https://documentation.mjml.io/#mj-group) element, but note its
 warning for iOS 9.
 
-If you are not using an image in your sign-off, or you are including an image
-on a line by itself (such as an image of a signature) you can simply use the
+If you are not using an image in your sign-off, or you are including an image on
+a line by itself (such as an image of a signature) you can simply use the
 default `<mj-image>` and `<mj-text>` elements.
 
 # License
