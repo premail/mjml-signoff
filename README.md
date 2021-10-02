@@ -9,6 +9,8 @@ types of emails:
 
 Brought to you by [premail](https://premail.dev).
 
+---
+
 <!-- The following section, from "ts" to "te", is an automatically-generated
   table of contents, updated whenever this file changes. Do not edit within
   this section. -->
