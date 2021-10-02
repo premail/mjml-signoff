@@ -12,7 +12,9 @@ types of emails:
 
 ![Example of generated markup from the MJML Signoff component](examples/mjml-signoff-screenshot.png)
 
-Brought to you by [premail](https://premail.dev).
+---
+
+**Brought to you by [premail](https://github.com/premail).**
 
 ---
 
