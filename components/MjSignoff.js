@@ -8,6 +8,8 @@ export default class MjSignoff extends BodyComponent {
   static dependencies = {
     'mj-signoff': [],
     'mj-body': ['mj-signoff'],
+    'mj-section': ['mj-signoff'],
+    'mj-column': ['mj-signoff'],
     'mj-wrapper': ['mj-signoff'],
   }
 
