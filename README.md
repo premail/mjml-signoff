@@ -171,7 +171,7 @@ Add the package to your `.mjmlconfig`:
 
 ```json
 {
-  "packages": ["mjml-signoff/lib/index.js"]
+  "packages": ["mjml-signoff"]
 }
 ```
 
