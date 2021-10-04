@@ -21,7 +21,7 @@ types of emails:
 <!-- The following section, from the prettier-ignore-start to the
   prettier-ignore-end, is an automatically-generated table of contents, updated
   whenever this file changes. Do not edit within this section. -->
-<!-- prettier-ignore-start -->
+<!-- prettier-ignore-start --> 
 
 <!--ts-->
 * [MJML Sign-Off: &lt;mj-signoff&gt;](#mjml-sign-off-mj-signoff)
