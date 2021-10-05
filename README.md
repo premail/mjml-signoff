@@ -18,26 +18,14 @@ types of emails:
 
 ---
 
-<!-- The following section, from the prettier-ignore-start to the
-  prettier-ignore-end, is an automatically-generated table of contents, updated
-  whenever this file changes. Do not edit within this section. -->
-<!-- prettier-ignore-start --> 
-
-<!--ts-->
-* [MJML Sign-Off: &lt;mj-signoff&gt;](#mjml-sign-off-mj-signoff)
-* [Usage](#usage)
-   * [Coding](#coding)
-   * [Styling](#styling)
-   * [Options](#options)
-   * [Adding this to your emails](#adding-this-to-your-emails)
-   * [Fork or contribute to this component](#fork-or-contribute-to-this-component)
-* [Alternatives](#alternatives)
-* [License](#license)
-
-<!-- Added by: runner, at: Mon Oct  4 23:20:00 UTC 2021 -->
-
-<!--te-->
-<!-- prettier-ignore-end -->
+- [Usage](#usage)
+  - [Coding](#coding)
+  - [Styling](#styling)
+  - [Options](#options)
+  - [Adding this to your emails](#adding-this-to-your-emails)
+  - [Fork or contribute to this component](#fork-or-contribute-to-this-component)
+- [Alternatives](#alternatives)
+- [License](#license)
 
 # Usage
 
