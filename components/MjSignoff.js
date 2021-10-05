@@ -3,6 +3,7 @@ import reverse from 'lodash/reverse'
 import { BodyComponent } from 'mjml-core'
 
 export default class MjSignoff extends BodyComponent {
+  static componentName = 'mj-signoff'
   static endingTag = true
 
   static dependencies = {
