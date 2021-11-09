@@ -35,9 +35,11 @@
 
 ---
 
-**This MJML component is brought to you by
-[Premail](https://github.com/premail), and the following documentation can also
-be found at <https://premail.dev/docs/components/mjml-signoff/>**
+<a href="https://github.com/premail"><img src="https://raw.githubusercontent.com/premail/mjml-bullet-list/main/docs/images/icon.svg" alt="Premail" width="50" height="50" align="left" /></a><strong>This
+MJML component is brought to you by
+<a href="https://github.com/premail">Premail</a>, and the following
+documentation can also be found at
+<a href="https://premail.dev/docs/components/mjml-signoff">https://premail.dev/docs/components/mjml-signoff</a></strong>
 
 ---
 
@@ -46,7 +48,7 @@ content, the `<mj-signoff>` tag allows you to easily include an image alongside
 your signature such as a photo or logo, which is a common best practice in many
 types of emails:
 
-![Example of generated markup from the MJML Signoff component](examples/mjml-signoff-screenshot.png)
+![Example of generated markup from the MJML Signoff component](docs/images/mjml-signoff-screenshot.png)
 
 ---
 
@@ -57,6 +59,7 @@ types of emails:
   - [Adding this to your emails](#adding-this-to-your-emails)
   - [Fork or contribute to this component](#fork-or-contribute-to-this-component)
 - [Alternatives](#alternatives)
+- [Security](#security)
 - [License](#license)
 
 # Usage
@@ -89,7 +92,7 @@ This MJML:
 
 Will produce the following visual representation:
 
-![Example of generated markup from the MJML Signoff component](examples/mjml-signoff-screenshot.png)
+![Example of generated markup from the MJML Signoff component](docs/images/mjml-signoff-screenshot.png)
 
 The `closing`, `name` and `title` strings are all optional, as are an additional
 `title2` and `title3` strings. These strings cannot contain HTML elements,
@@ -98,8 +101,8 @@ the optional strings -- for instance, the wrapped and linked company name shown
 above. `<mj-signoff>` need not have any content within its tags, however.
 
 The wrapper `<p>` and `<div>` elements are only inserted if the corresponding
-strings are set. A simplified version of the
-[generated HTML](examples/index.html) is:
+strings are set. A simplified version of the [generated HTML](docs/example.html)
+is:
 
 ```html
 <div class="signoff">
@@ -155,7 +158,7 @@ And the following CSS classes are available for styling with
 - `signoff__custom`
 
 You can see how each of these are used in the
-[example MJML file](examples/index.mjml).
+[example MJML file](docs/example.mjml).
 
 ## Options
 
@@ -235,6 +238,14 @@ warning for iOS 9.
 If you are not using an image in your sign-off, or you are including an image on
 a line by itself (such as an image of a signature) you can simply use the
 default `<mj-image>` and `<mj-text>` elements.
+
+# Security
+
+Legalese: This component is provided **"as is"** without any warranty. Use at
+your own risk.
+
+_For more information and to report security issues, please refer to our
+[security documentation](https://github.com/premail/mjml-signoff/blob/main/docs/SECURITY.md)._
 
 # License
 
