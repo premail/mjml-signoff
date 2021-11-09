@@ -1,4 +1,4 @@
-# MJML Sign-Off: `<mj-signoff>`
+<h1 align="center">MJML Sign-Off: <code>&lt;mj-signoff&gt;</code></h1>
 
 <!-- This component's documentation and README need to stay in sync. Make sure
      to make any updates here in both places:
@@ -11,10 +11,35 @@
      https://www.npmjs.com/package/mjml-signoff
 -->
 
+<div align="center">
+  <strong>Sign your MJML emails in style</strong><br />
+  <br />
+  <a href="https://github.com/premail/mjml-signoff/issues/new?assignees=&labels=Type%3A+Bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
+  &bullet;
+  <a href="https://github.com/premail/mjml-signoff/issues/new?assignees=&labels=Type%3A+Feature&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
+  &bullet;
+  <a href="https://github.com/premail/mjml-signoff/issues/new?assignees=&labels=Type%3A+Question&template=03_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
+</div>>
+
+<div align="center">
+<br />
+
 [![NPM](https://img.shields.io/npm/v/mjml-signoff?style=flat-square)](https://www.npmjs.com/package/mjml-signoff)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/premail/mjml-signoff?sort=semver&style=flat-square)](https://github.com/premail/mjml-signoff/releases)
+![Checks](https://img.shields.io/github/checks-status/premail/mjml-signoff/main.svg?style=flat-square)
 [![MJML 4.0+ valid](https://img.shields.io/badge/mjml-4%2B-brightgreen.svg?style=flat-square)](https://github.com/mjmlio/mjml/releases)
-[![License](https://img.shields.io/npm/l/mjml-signoff?color=brightgreen&style=flat-square)](https://github.com/premail/mjml-signoff/blob/main/LICENSE)
+[![License: AGPL-3.0+](https://img.shields.io/github/license/premail/mjml-signoff?style=flat-square&color=blue)](https://github.com/premail/mjml-signoff/blob/main/LICENSE)
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/premail/mjml-signoff/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22%2C%22Status%3A+Available%22+sort%3Aupdated-desc+)
+
+</div>
+
+---
+
+**This MJML component is brought to you by
+[Premail](https://github.com/premail), and the following documentation can also
+be found at <https://premail.dev/docs/components/mjml-signoff/>**
+
+---
 
 Designed for the sign-off or signature section at the bottom of your email
 content, the `<mj-signoff>` tag allows you to easily include an image alongside
@@ -22,10 +47,6 @@ your signature such as a photo or logo, which is a common best practice in many
 types of emails:
 
 ![Example of generated markup from the MJML Signoff component](examples/mjml-signoff-screenshot.png)
-
----
-
-**Brought to you by [premail](https://github.com/premail).**
 
 ---
 
@@ -217,4 +238,9 @@ default `<mj-image>` and `<mj-text>` elements.
 
 # License
 
-GPLv3. See [LICENSE](LICENSE).
+`mjml-signoff` is licensed under the GNU Affero General Public License v3.0 or
+later. To be clear: This license only covers the component's code, _not_ any
+content you generate _using_ it.
+
+For the legal details of the AGPL, see the complete
+[LICENSE](https://github.com/premail/mjml-signoff/blob/main/LICENSE).
