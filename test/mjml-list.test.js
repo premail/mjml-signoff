@@ -13,7 +13,7 @@ function toHtml (mjml) {
   return conversion.html
 }
 
-const data = fs.readFileSync('./examples/index.mjml', 'utf8')
+const data = fs.readFileSync('./docs/example.mjml', 'utf8')
 
 describe('mjml-signoff', () => {
   beforeAll(() => {
