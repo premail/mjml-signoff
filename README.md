@@ -7,7 +7,7 @@
      https://github.com/premail/mjml-signoff/blob/main/README.md
 
      Should differences exist, the README is considered canonical as it is
-     published to NPM:
+     published to npm:
      https://www.npmjs.com/package/mjml-signoff
 -->
 
@@ -24,7 +24,7 @@
 <div align="center">
 <br />
 
-[![NPM](https://img.shields.io/npm/v/mjml-signoff?style=flat-square)](https://www.npmjs.com/package/mjml-signoff)
+[![npm](https://img.shields.io/npm/v/mjml-signoff?style=flat-square)](https://www.npmjs.com/package/mjml-signoff)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/premail/mjml-signoff?sort=semver&style=flat-square)](https://github.com/premail/mjml-signoff/releases)
 [![Release Date](https://img.shields.io/github/release-date/premail/mjml-signoff?style=flat-square)](https://github.com/premail/premail/releases/latest)
 [![MJML 4.0+ valid](https://img.shields.io/badge/mjml-4%2B-brightgreen.svg?style=flat-square)](https://github.com/mjmlio/mjml/releases)
