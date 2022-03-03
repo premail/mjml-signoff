@@ -193,13 +193,13 @@ npm install mjml-signoff
 In your build process script (such as gulp), require the package:
 
 ```js
-const mjmlBulletList = require('mjml-signoff')
+const mjmlSignoff = require('mjml-signoff')
 ```
 
 or
 
 ```js
-import mjmlBulletList from mjml-signoff
+import mjmlSignoff from mjml-signoff
 ```
 
 Finally, add the package to your `.mjmlconfig`:
