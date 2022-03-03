@@ -34,7 +34,7 @@ describe('mjml-signoff', () => {
 
   it('should include the title', () => {
     expect(toHtml(data)).toContain(
-      '<p class="signoff__title" style="margin-top: 0; margin-bottom: 0;">Wild and Crazy Guy</p>'
+      '<p class="signoff__title" style="margin-top: 0; margin-bottom: 0;">Your Friendly Neighbor</p>'
     )
   })
 
