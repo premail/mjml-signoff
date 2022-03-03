@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "mjml": "^4.0.0",
-    "mjml-core": "^4.10.3"
+    "mjml": "^4.12.0",
+    "mjml-core": "^4.12.0"
   }
 }
