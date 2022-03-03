@@ -1,1 +1,1 @@
-module.exports = require('./MjSignoff')
+module.exports = require('./MjSignoff.js')
