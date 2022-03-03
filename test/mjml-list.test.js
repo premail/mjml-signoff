@@ -2,7 +2,7 @@ import fs from 'fs'
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
 
-import MjSignoff from '../lib/MjSignoff.js'
+import MjSignoff from '../lib/index.js'
 
 function toHtml (mjml) {
   const conversion = mjml2html(mjml)
