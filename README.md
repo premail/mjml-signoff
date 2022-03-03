@@ -190,7 +190,19 @@ In your MJML project directory, install this package via npm:
 npm install mjml-signoff
 ```
 
-Add the package to your `.mjmlconfig`:
+In your build process script (such as gulp), require the package:
+
+```js
+const mjmlBulletList = require('mjml-signoff')
+```
+
+or
+
+```js
+import mjmlBulletList from mjml-signoff
+```
+
+Finally, add the package to your `.mjmlconfig`:
 
 ```json
 {
