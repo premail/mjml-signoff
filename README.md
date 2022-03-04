@@ -15,9 +15,9 @@
   <strong>Sign your MJML emails in style</strong><br />
   <br />
   <a href="https://github.com/premail/mjml-signoff/issues/new?assignees=&labels=Type%3A+Bug&template=01_bug_report.yml&title=bug%3A+">Report a Bug</a>
-  &bullet;
+  -
   <a href="https://github.com/premail/mjml-signoff/issues/new?assignees=&labels=Type%3A+Feature&template=02_feature_request.yml&title=feat%3A+">Request a Feature</a>
-  &bullet;
+  -
   <a href="https://github.com/premail/mjml-signoff/issues/new?assignees=&labels=Type%3A+Question&template=03_support_question.yml&title=support%3A+">Ask a Question</a>
 </div>
 
